@@ -66,9 +66,11 @@ export const schema = {
                     name: "title",
                     type: "String"
                 },
-                content: {
-                    name: "content",
-                    type: "String"
+                slug: {
+                    name: "slug",
+                    type: "String",
+                    unique: true,
+                    attributes: [{ name: "@unique" }]
                 },
                 published: {
                     name: "published",
@@ -76,15 +78,23 @@ export const schema = {
                     attributes: [{ name: "@default", args: [{ name: "value", value: ExpressionUtils.literal(false) }] }],
                     default: false
                 },
+                viewCount: {
+                    name: "viewCount",
+                    type: "Int",
+                    attributes: [{ name: "@default", args: [{ name: "value", value: ExpressionUtils.literal(0) }] }],
+                    default: 0
+                },
                 author: {
                     name: "author",
                     type: "User",
+                    optional: true,
                     attributes: [{ name: "@relation", args: [{ name: "fields", value: ExpressionUtils.array([ExpressionUtils.field("authorId")]) }, { name: "references", value: ExpressionUtils.array([ExpressionUtils.field("id")]) }] }],
                     relation: { opposite: "posts", fields: ["authorId"], references: ["id"] }
                 },
                 authorId: {
                     name: "authorId",
                     type: "Int",
+                    optional: true,
                     foreignKeyFor: [
                         "author"
                     ]
@@ -92,7 +102,8 @@ export const schema = {
             },
             idFields: ["id"],
             uniqueFields: {
-                id: { type: "Int" }
+                id: { type: "Int" },
+                slug: { type: "String" }
             }
         }
     },
