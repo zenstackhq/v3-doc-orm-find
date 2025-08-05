@@ -5,7 +5,8 @@
     "generate": "zen generate",
     "dev": "tsx basic.ts",
     "basic": "tsx basic.ts",
-    "sort": "tsx sort.ts"
+    "sort": "tsx sort.ts",
+    "pagination": "tsx pagination.ts"
   },
   "devDependencies": {
     "@types/node": "^24.1.0",

@@ -1,6 +1,7 @@
 import { createClient } from './db';
 import { createUsersAndPosts } from './utils';
 
+// sort demo
 async function main() {
   const db = await createClient();
 

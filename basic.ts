@@ -2,6 +2,7 @@ import { QueryError } from '@zenstackhq/runtime';
 import { createClient } from './db';
 import { createPosts } from './utils';
 
+// basic find demo
 async function main() {
   const db = await createClient();
 
