@@ -6,7 +6,8 @@
     "dev": "tsx basic.ts",
     "basic": "tsx basic.ts",
     "sort": "tsx sort.ts",
-    "pagination": "tsx pagination.ts"
+    "pagination": "tsx pagination.ts",
+    "selection": "tsx selection.ts"
   },
   "devDependencies": {
     "@types/node": "^24.1.0",
