@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "generate": "zen generate",
+    "dev": "tsx basic.ts",
     "basic": "tsx basic.ts",
     "sort": "tsx sort.ts"
   },
