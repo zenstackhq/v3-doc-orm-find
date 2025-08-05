@@ -7,7 +7,8 @@
     "basic": "tsx basic.ts",
     "sort": "tsx sort.ts",
     "pagination": "tsx pagination.ts",
-    "selection": "tsx selection.ts"
+    "selection": "tsx selection.ts",
+    "distinct": "tsx distinct.ts"
   },
   "devDependencies": {
     "@types/node": "^24.1.0",
