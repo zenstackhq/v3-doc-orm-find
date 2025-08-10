@@ -66,10 +66,16 @@ export const schema = {
                     name: "title",
                     type: "String"
                 },
+                content: {
+                    name: "content",
+                    type: "String",
+                    optional: true
+                },
                 slug: {
                     name: "slug",
                     type: "String",
                     unique: true,
+                    optional: true,
                     attributes: [{ name: "@unique" }]
                 },
                 published: {
